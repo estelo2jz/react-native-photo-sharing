@@ -33,7 +33,7 @@ const albumPage = [
   {
     id: 1,
     title: 'Dogs',
-    user: 'MOnica',
+    user: 'Monica',
     background: image1,
     avatars: [
       {

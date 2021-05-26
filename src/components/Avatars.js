@@ -9,9 +9,11 @@ const Avatars = ({avatars}) => {
         <Image 
           key={index}
           source={item.image}
-          style={
-            styles.avatarStyle
-          }
+          style={[
+            styles.avatarStyle,
+            { zIndex: index, marginLeft: (index * 16) },
+            index !== (avatars.length - 1) && {position: 'absolute'}
+          ]}
         />
       )}
     </View>

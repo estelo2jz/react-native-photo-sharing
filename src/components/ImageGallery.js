@@ -1,12 +1,48 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, StyleSheet, FlatList, Image } from 'react-native';
+import theme from '../../assets/themes';
 
-const ImageGallery = () => {
+const ListImage = ({image}) => {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Image Album</Text>
+    <Image 
+      source={image.background}
+      style={styles.galleryImage}
+    />
+  )
+}
+
+const ImageGallery = ({images}) => {
+  return (
+    <View style={styles.galleryContainer}>
+      <Text style={styles.galleryText}>Photos</Text>
+
+      <FlatList
+        data={images}
+        keyExtractor={item => item.id}
+        numColumns={3}
+        scrollEnabled={false}
+        renderItem={({item}) => <ListImage image={item} />}
+      />
     </View>
   )
 }
+
+const styles = StyleSheet.create({
+  galleryContainer: {
+    alignItems: 'center',
+    marginBottom: theme.spacing.l,
+
+  },
+  galleryText: {
+    alignItems: 'center',
+    ...theme.textVariants.body3,
+    color: theme.colors.gray,
+  },
+  galleryImage: {
+    height: theme.imageHeight.l,
+    width: theme.imageHeight.l,
+    margin: 2,
+  }
+})
 
 export default ImageGallery;

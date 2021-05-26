@@ -32,7 +32,7 @@ import avatar20 from '../images/avatarImages/avatar20.png';
 const albumPage = [
   {
     id: 1,
-    title: 'Dogs',
+    title: 'Owls',
     user: 'Monica',
     background: image1,
     avatars: [
@@ -44,7 +44,7 @@ const albumPage = [
   },
   {
     id: 2,
-    title: 'Travel',
+    title: 'Tanks',
     user: 'John',
     background: image2,
     avatars: [
@@ -60,7 +60,7 @@ const albumPage = [
   },
   {
     id: 3,
-    title: 'Hiking',
+    title: 'Pokemon',
     user: 'Carla',
     background: image3,
     avatars: [
@@ -80,7 +80,7 @@ const albumPage = [
   },
   {
     id: 4,
-    title: 'Night sky',
+    title: 'Apex Legends',
     user: 'Jimmy',
     background: image4,
     avatars: [
@@ -96,7 +96,7 @@ const albumPage = [
   },
   {
     id: 5,
-    title: 'Architecture',
+    title: 'Drifting',
     user: 'Mike',
     background: image5,
     avatars: [
@@ -112,7 +112,7 @@ const albumPage = [
   },
   {
     id: 6,
-    title: 'Art',
+    title: 'Coding',
     user: 'Jane',
     background: image6,
     avatars: [
@@ -132,7 +132,7 @@ const albumPage = [
   },
   {
     id: 7,
-    title: 'Camping',
+    title: 'Sky Diving',
     user: 'George',
     background: image7,
     avatars: [
@@ -152,7 +152,7 @@ const albumPage = [
   },
   {
     id: 8,
-    title: 'California',
+    title: 'Cruising',
     user: 'Steven',
     background: image8,
     avatars: [
@@ -172,7 +172,7 @@ const albumPage = [
   },
   {
     id: 8,
-    title: 'Cars',
+    title: 'JDM',
     user: 'Claire',
     background: image9,
     avatars: [

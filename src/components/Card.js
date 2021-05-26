@@ -3,22 +3,25 @@ import { View, Text, ImageBackground, StyleSheet, Pressable } from 'react-native
 import theme from '../../assets/themes';
 import Avatars from './Avatars';
 
-const Card = ({item}) => {
+const Card = ({item, navigation}) => {
   return (
     <ImageBackground
       source={item.background}
       style={styles.imageBackground}
     >
-      <Pressable>
-        <View style={styles.imageContentContainer}>
+      <Pressable 
+        style={styles.imageContentContainer}
+        onPress={() => navigation.navigate("Shared Album", {
+          album: item
+        })}
+      >
+        <View>
           <View>
             <Text style={styles.imageTitle}>{item.title}</Text>
             <Text style={styles.imageSubtitle}>{`Create by ${item.user}`}</Text>
           </View>
         </View>
         <View>
-          {/* Avatars go here */}
-          console.log(item.avatars)
           <Avatars avatars={item.avatars} />
         </View>
       </Pressable>
@@ -38,6 +41,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   imageContentContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
   },
   imageTitle: {
     ...theme.textVariants.h1,
